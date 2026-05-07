@@ -28,12 +28,14 @@ Data preprocessing ivolved:
 - Skull stripping - Remove any irrelevant non-brain tissues like sculp , eyes,or background which will improve localization accuracy , improve false positive cases.
 - Data Augmantation - since MRI data set is small and the images may vary in shape,orientation and size, augmantation will help increasing image size and create variations in existing images, this will prevent overfitting, make model more robust to rotation and scale changes.
 
+  
+
 
 Then data was split in the following way:
 
-80% of the data for training.
-10% of the data for validation.
-10% of the data for testing.
+70% of the data for training.
+15% of the data for validation.
+15% of the data for testing.
 
  #### Model Training 
 Neural Network Architecture  
@@ -44,6 +46,10 @@ Neural Network Architecture
 Understanding the architecture:
 Each input x (image) has a shape of (240, 240, 3) and is fed into the neural network. And, it goes through the following layers:
 
+Classification Report
+- 4 healthy cases were being missclasified as unlhealthy which might lead to further investigations and resource wastage ; since the goal is to accurately identify tumor cases only 1 image with tumor has been misclassified   
+
+- Model had high sensitivity and low specificity;  contributed by; dataset imbalance
 
 
 Loss plot and and accuracy plot was as displayed.  
