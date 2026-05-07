@@ -63,6 +63,7 @@ Classification Report
 - 4 healthy cases were being missclasified as unlhealthy which might lead to further investigations and resource wastage ; since the goal is to accurately identify tumor cases only 1 image with tumor has been misclassified   
 
 - Model had high sensitivity and low specificity;  contributed by; dataset imbalance
+<img width="1556" height="1078" alt="image" src="https://github.com/user-attachments/assets/79e43184-c05f-4f20-abfa-ae57fef084d4" />
 
 
 Loss plot and and accuracy plot was as displayed.  
