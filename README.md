@@ -59,7 +59,15 @@ Neural Network Architecture
 Understanding the architecture:
 Each input x (image) has a shape of (240, 240, 3) and is fed into the neural network. And, it goes through the following layers:
 
-Classification Report
+- VGG16 Pretrained Feature Extraction Backbone (Frozen Layers)
+ - Feature Maps Generation→ AveragePooling2D (4×4)→ Flatten Layer
+ - Dense Layer (64, ReLU)→ Batch Normalization→ Dropout (0.5)
+ - Output Layer (Dense(2), Softmax)
+ -  Brain Tumor Prediction (Tumor / No Tumor)
+
+
+
+### Classification Report
 - 4 healthy cases were being missclasified as unlhealthy which might lead to further investigations and resource wastage ; since the goal is to accurately identify tumor cases only 1 image with tumor has been misclassified   
 
 - Model had high sensitivity and low specificity;  contributed by; dataset imbalance
