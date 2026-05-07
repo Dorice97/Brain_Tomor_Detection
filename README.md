@@ -44,6 +44,17 @@ Neural Network Architecture
 Understanding the architecture:
 Each input x (image) has a shape of (240, 240, 3) and is fed into the neural network. And, it goes through the following layers:
 
+
+
 Loss plot and and accuracy plot was as displayed.  
 
 - From visual training curves show steady convergence with decreasing loss and increasing accuracy. Validation performance remains high throughout training, with minor fluctuations due to the small dataset size. No significant overfitting is observed, indicating good generalization of the VGG16-based model.
+  
+- RCO curve indicates the model records high AUC of 0.9507, with high recall and less false positives which is a key metric in medical detection
+  
+- There is clear probability separation
+
+
+  
+  ROC CURVE <img width="2082" height="730" alt="image" src="https://github.com/user-attachments/assets/b096b7aa-2da8-4272-bdab-1c5782340228" />
+
