@@ -28,7 +28,7 @@ Data preprocessing ivolved:
 - Skull stripping - Remove any irrelevant non-brain tissues like sculp , eyes,or background which will improve localization accuracy , improve false positive cases.
 - Data Augmantation - since MRI data set is small and the images may vary in shape,orientation and size, augmantation will help increasing image size and create variations in existing images, this will prevent overfitting, make model more robust to rotation and scale changes.
 
-  
+
 
 
 Then data was split in the following way:
@@ -36,6 +36,19 @@ Then data was split in the following way:
 70% of the data for training.
 15% of the data for validation.
 15% of the data for testing.
+
+### Data Augmentation  
+Because the dataset has only 253 images, augmentation is essential to:  
+
+
+- Prevent overfitting
+- Artificially expand training diversity
+- Improve robustness to orientation / brightness variation
+Augmentation was applied only to the training set at fit time — validation and test sets are untouched.
+
+Augmentation Pipeline  
+<img width="3132" height="1003" alt="image" src="https://github.com/user-attachments/assets/5590df8e-7de2-4540-9008-8839b701f2ae" />
+
 
  #### Model Training 
 Neural Network Architecture  
